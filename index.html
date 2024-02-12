@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="home.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600&display=swap" rel="stylesheet">
+
+
+    <link rel="icon" href="images/logo__formes/Artboard 2.png">
+    <title>Sarah Mirouze</title>
+    
+</head>
+<body>
+    
+
+    <span id="circle" class="circle"></span>
+    <div class="img"><img class="MyLogo" src="images/logo__formes/Logo_Sarah.png" alt=""></div>
+
+    <div class="fullpage" >
+
+      <div class="desktop section ">
+            <video id="video" onclick="location.href='./pages/about.html','mywindow';" style="cursor: pointer;" muted loop   class="mobile section02" src="images/accueil/anim_illu_03_V1.mp4" type="video/mp4" onmouseover="this.show()" onmouseout="this.hide()" onmouseenter='VideoController(true, this)'
+            onmouseleave='VideoController(false, this)'>    
+            </video>
+            <div class="about content">
+                <h1  onmouseover="document.getElementById('video').show()" onmouseout="document.getElementById('video').hide()"><a class="title" href="./pages/about.html">about me</a></h1>
+            </div>
+        </div>
+        <div class="desktop section ">
+            <video onclick="location.href='./pages/work.html','mywindow';" style="cursor: pointer;"  muted loop   class="mobile section02" src="images/accueil/anim_illu_01_V1.mp4" type="video/mp4"  onmouseenter='VideoController(true, this)'
+            onmouseleave='VideoController(false, this)'>       
+            </video>
+            <div class="content">
+                <h1><a class="title" href="./pages/work.html">work</a></h1>
+            </div>
+        </div>
+        <div  class="desktop section ">
+            <video onclick="location.href='./pages/contact.html','mywindow';" style="cursor: pointer;"  muted loop   class="mobile section02" src="images/accueil/anim_illu_04_V1.mp4" type="video/mp4"  onmouseenter='VideoController(true, this)'
+            onmouseleave='VideoController(false, this)'>       
+            </video>
+            <div class="content">
+                <h1><a class="title" href="./pages/contact.html">contact</a></h1>
+            </div>
+        </div>
+
+    <script>
+        const VideoController = function(isHovering, videoElement)
+    {
+        if (isHovering == true)
+        {
+            videoElement.play();
+        }
+        else if (isHovering == false)
+        {
+            videoElement.pause();
+        }
+    }
+    
+    </script>
+
+</body>
+</html>

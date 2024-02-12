@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../../styles/working__pages.css">
+    <link rel="stylesheet" href="../../general.css">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../../images/logo__formes/favicon-04.jpg">
+    <title>Social media</title>
+</head>
+<body>
+
+<!--___________________________CURSOR__________________________ -->
+<div id="circle"></div>
+<div id="dot"></div>
+
+<script>
+        const dot = document.getElementById("dot")
+        const circle = document.getElementById("circle")
+        //
+        const speed = 6;
+        let endX = 0;
+        let endY = 0;
+        let _x = 0;
+        let _y = 0;
+        //
+        document.onmousemove = (event)=> {
+        endX = event.pageX;
+        endY = event.pageY;
+        dot.style.top = endY - 6 + "px";
+        dot.style.left = endX - 6 + "px";
+        }
+
+        function animateCircle() {
+        requestAnimationFrame(animateCircle);  
+        _x += (endX - _x) / speed;
+        _y += (endY - _y) / speed;
+        circle.style.top = _y - 32 + "px"
+        circle.style.left = _x - 32 + "px"
+        }
+
+        animateCircle();
+    </script>
+    
+
+
+  
+      <!-- DESKTOP -->
+      
+      <header class="header_desktop">
+        <div>
+            <ul id="new_menu">
+                <div class="img"><a  href="../../index.html"><img style="border: transparent;" class="MyLogo" src="../../images/logo__formes/Logo_Sarah.png" alt=""></a></div>
+                <li ><a  id="navitem" href="../about.html">About</a></li>
+                <li class="active"><a id="navitem" href="../work.html">Work</a></li>
+                <li><a  id="navitem" href="../contact.html">Contact</a></li>
+            </ul>
+        </div>
+      
+      </header>
+    <!-- ______________________________MOBILE _________________________-->
+
+    <header id="header_mobile" class="backMenu">
+      <div style="overflow: hidden;" id="mySidenav" class="sidenav">           
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+          <ul id="menu">
+              <div class="img"> <a href="../../index.html"><img class="MyLogo" src="../../images/logo__formes/Logo_Sarah.png" alt=""></a></div>
+              <li><a  id="navitem" href="../about.html">About</a></li>
+              <li class="active"><a id="navitem" href="">Work</a></li>
+              <li><a  id="navitem" href="../contact.html">Contact</a></li>
+          </ul>
+      </div>
+      <span id="burger" onclick="openNav()">&#9776;</span>
+  </header>
+
+
+  <script>
+
+    function openNav() {
+        document.getElementById("mySidenav").style.boxShadow = "rgb(3 8 20 / 10%) 0px 0.15rem 0.5rem, rgb(2 8 20 / 10%) 0px 0.075rem 0.175rem";
+        document.getElementById("mySidenav").style.width = "100%";
+        document.getElementById("mySidenav").style.background = "var(--sixth-color)";
+        document.getElementById("mySidenav").style.zIndex = "100";
+        document.getElementById("burger").style.color = "transparent";
+        document.getElementById("burger").style.backgroundColor = "transparent";
+        document.getElementById("burger").style.transition = "0.5s";
+        document.getElementById("burger").style.display = "none";
+        
+    }
+
+    function closeNav() {
+        document.getElementById("mySidenav").style.zIndex = "100";
+        document.getElementById("mySidenav").style.boxShadow = "transparent";
+        document.getElementById("mySidenav").style.background = "transparent";
+        document.getElementById("burger").style.backgroundColor = "transparent";
+        document.getElementById("mySidenav").style.width = "0px";
+        document.getElementById("burger").style.color = "black";
+        document.getElementById("burger").style.display = "flex";
+        document.getElementById("burger").style.transition = "0.5s";
+    }
+
+</script>
+
+<!-- __________________CONTENUS___________________ -->
+<button onclick="location.href='../work.html','mywindow';" class="sous-menu">
+  <i class="back__arrow fa fa-angle-double-left"></i>
+  back
+</button>
+
+<section class="section__intro">
+    <a class="down__arrow__link" href="#section__down"><img class="down__arrow" src="../../images/social__icons/icons8-flèche-développer-100.png" alt=""></a>
+    <div class="objective">
+    <h1>My Brief</h1>
+    <p>Is to choose the right social media for a movie production agency, make the brand known, keep an editorial calendar, take care of the content..</p> 
+    </div>
+  </section>
+  <div id="section__down" class="container">
+    <div class="box">
+      <h1 class="pageName"><span class="s_mobile">feed instagram </span></h1>
+      <div class="items">
+        <video class="none" style="width:50%;" muted loop autoplay src="../../images/work/screen-feedinsta&.mp4" alt=""></video>
+      </div>
+    </div>
+  </div>
+  <div class="container last">
+    <div class="box">
+      <h1 class="pageName"><span class="s_mobile">instagram story content</span></h1>
+      <div class="items">
+        <div style="display: flex; flex-direction: row; gap: 1.2%; ">
+        <div style=" height: 100%; width: 100%;">
+          <video class="none" style="width:100%;" muted loop autoplay src="../../images/work/storykantuen.mp4" alt=""></video>
+          </div>
+        <div style="height: 100%; width: 100%;">
+          <video class="none" style="width:100%;" muted loop autoplay src="../../images/work/NPODT°4.mp4" alt=""></video>
+  
+      </div>
+      </div>
+      </div>
+    </div>
+  </div>
+  
+<!-- _______FOOTER________ -->
+
+<footer>
+    <div>
+        <h3 class="copyright">Sarah Mirouze</h3>
+    </div>
+    <div class="social-media">
+        <a href="https://www.facebook.com/sarah.mirouze/" class="fa fa-facebook"></a>
+        <a href="https://www.instagram.com/sarah.mirouze/?hl=fr" class="fa fa-instagram"></a>
+        <a href="https://www.linkedin.com/in/sarah-mirouze-b27b10171/" class="fa fa-linkedin"></a>
+    </div>
+</footer>  
+</body>
+</html>

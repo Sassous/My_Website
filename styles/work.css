@@ -1,0 +1,132 @@
+body{
+    background-color: var(--sixth-color);
+
+}
+.fullpage{
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: 100%;
+    position: fixed;
+    transition: all 500ms;
+    padding: 3% 0 0 0;
+  }
+  .back__arrow{
+    color: var(--sixth-color);
+  }
+  .hide {
+  transition: opacity .5s ease-out;
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+  }
+  .myDIV:hover + .hide {
+  opacity: 1;
+  height: auto;
+  width: 100%;
+  
+  }
+  img{
+    position: absolute;
+  }
+  .theme{
+  transition: all .5s ease-in-out; 
+  z-index: 1;
+  transition: all 500ms;
+  color: white;
+  font-size: 100px;
+  font-weight: 700;
+  left: 8%;
+  position: absolute;
+  }
+ .theme:hover{
+  color: #826AED;
+  }
+  .bloc_title{
+    padding: 7% 0 14% 0;
+  }
+
+  /* _____FOOTER_____ */
+footer{
+    position: fixed !important;
+    width: 100% !important;
+    bottom: 0;
+}
+.fa, .fa:hover{
+  background-color: black !important;
+  color: var(--sixth-color);
+}
+.copyright{
+  color: black !important;
+}
+/* ___________________________________RESPONSIVE____________________________ */
+@media all and (min-width: 1200px) and (max-width: 1600px){
+  img{
+    width: 100%;
+  }
+  .theme{
+    font-size: 90px;
+  }
+  .section__1200px{
+    margin-top: 8% !important;
+  }
+
+}
+@media all and (min-width: 300px) and (max-width: 1040px){
+  .hide{
+    display: none;
+  }
+  
+  .fullpage{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+  
+  }
+  .bloc_title{
+    padding: 0 0 0 0;
+  }
+  
+  section{
+    margin:  0 0 5% 0  !important;
+  }
+  .theme{
+    left: auto;
+    position: relative;
+    font-size: 40px;
+  }
+  .theme:hover{
+    color: white;
+  }
+          /*-----------FOOTER------- */
+  .foot{
+    justify-content: center;
+  }
+  footer{
+    display: flex;
+    height: 80px;
+    flex-direction: column;
+    background-color: white;
+    align-items: center;
+    justify-content: center;
+  }
+  .img{
+    z-index: 200;
+    position: fixed;
+    height: 9%;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background-color: var(--sixth-color);
+  }
+  .fa{
+    color: white !important;
+    background-color: var(--sixth-color) !important;
+  }
+  
+  
+}

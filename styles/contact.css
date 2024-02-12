@@ -1,0 +1,77 @@
+
+   .bloc{
+    margin-top: 22%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .contact__text{
+    font-size: 18px; 
+    padding-bottom: 5px;
+    text-transform: none;
+  }
+  .line-1 {
+    height: 1px;
+    background: var(--fifth-color);
+    display: block;
+    position: relative;
+    width: 19%;
+    margin-bottom: 2%;
+  }
+  .line-2{
+    width: 100%;
+    margin-top: 5%;
+    height: 3px;
+  }
+  .mail_mobile{
+    display: none;
+  }
+  
+  .color{
+    color: var(--fifth-color);
+  }    
+  .color:hover{
+    color: var(--fourth-color);
+  }
+  .social-media{
+    margin-top: 1%;
+  }
+  .fa{
+    background-color: var(--fifth-color) !important;
+    color: white !important;
+  }
+
+  /* ______________RESPONSIVE____________ */
+
+  @media all and (min-width: 300px) and (max-width: 1040px) {
+  .img{
+    z-index: 200;
+    position: fixed;
+    height: 9%;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background-color: var(--fifth-color);
+  }
+  .bloc{
+    padding: 65% 0 0 0;
+  }
+  .contact__text{
+    text-align: center;
+  }
+  .line-1{
+    margin-bottom: 5%;
+  }
+  .mail{
+    font-size: 21px;
+  }
+  .fa{
+    font-size: 25px !important;
+    width: 40px !important;
+    height: 40px !important;
+    color: white !important;
+  }
+}
+  
+  

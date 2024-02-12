@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../images/logo__formes/favicon-02.jpg">
+    <title>About me</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../styles/about.css" />
+    <link rel="stylesheet" type="text/css" href="../general.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" 
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+
+
+
+</head>
+<body>
+
+<!--___________________________CURSOR__________________________ -->
+<div id="circle"></div>
+<div id="dot"></div>
+
+<script>
+        const dot = document.getElementById("dot")
+        const circle = document.getElementById("circle")
+        //
+        const speed = 6;
+        let endX = 0;
+        let endY = 0;
+        let _x = 0;
+        let _y = 0;
+        //
+        document.onmousemove = (event)=> {
+        endX = event.pageX;
+        endY = event.pageY;
+        dot.style.top = endY - 6 + "px";
+        dot.style.left = endX - 6 + "px";
+        }
+
+        function animateCircle() {
+        requestAnimationFrame(animateCircle);  
+        _x += (endX - _x) / speed;
+        _y += (endY - _y) / speed;
+        circle.style.top = _y - 32 + "px"
+        circle.style.left = _x - 32 + "px"
+        }
+
+        animateCircle();
+    </script>
+    
+    <!-- ______________________________MOBILE _________________________-->
+
+    <header id="header_mobile" class="backMenu">
+        <div style="overflow: hidden;" id="mySidenav" class="sidenav">           
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <ul id="menu">
+                <div class="img"><a  href="../index.html"><img class="MyLogo" src="../images/logo__formes/Logo_Sarah.png" alt=""></a></div>
+                <li class="active"><a  id="navitem" href="">About</a></li>
+                <li><a id="navitem" href="work.html">Work</a></li>
+                <li><a  id="navitem" href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+        <span id="burger" onclick="openNav()">&#9776;</span>
+    </header>
+
+
+    <script>
+
+        function openNav() {
+            document.getElementById("mySidenav").style.boxShadow = "rgb(3 8 20 / 10%) 0px 0.15rem 0.5rem, rgb(2 8 20 / 10%) 0px 0.075rem 0.175rem";
+            document.getElementById("mySidenav").style.width = "100%";
+            document.getElementById("mySidenav").style.background = "var(--secondary-color)";
+            document.getElementById("mySidenav").style.zIndex = "100";
+            document.getElementById("burger").style.color = "transparent";
+            document.getElementById("burger").style.backgroundColor = "transparent";
+            document.getElementById("burger").style.transition = "0.5s";
+            document.getElementById("burger").style.display = "none";
+            
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.zIndex = "100";
+            document.getElementById("mySidenav").style.boxShadow = "transparent";
+            document.getElementById("mySidenav").style.background = "var(--secondary-color)";
+            document.getElementById("burger").style.backgroundColor = "transparent";
+            document.getElementById("mySidenav").style.width = "0px";
+            document.getElementById("burger").style.color = "black";
+            document.getElementById("burger").style.display = "flex";
+            document.getElementById("burger").style.transition = "0.5s";
+        }
+
+    </script>
+    
+
+<!-- ___________________________DESKTOP___________________________ -->
+
+<header class="header_desktop">
+        <ul id="new_menu">
+            <a href="../index.html"><img class="MyLogo" src="../images/logo__formes/Logo_Sarah.png" alt="">
+            <li class="active"><a  id="navitem">About</a></li>
+            <li><a id="navitem" href="work.html">Work</a></li>
+            <li><a  id="navitem" href="contact.html">Contact</a></li>
+        </ul>
+
+</header>
+
+<!--___________________________CONTENUS__________________________ -->
+<section class="section__intro">
+    <a class="down__arrow__link" href="#section__down"><img class="down__arrow" src="../images/social__icons/icons8-flèche-développer-100.png" alt=""></a>
+    <div class="intro">
+        <h1 class=" title__white">Hi, I'm Sarah Mirouze</h1>
+        <p> <br>I earned a degree in digital project management in September 2021. I have a passion for design, digital technology, and development. After obtaining my graphic designer degree, I pursued higher education for 3 years in ESD Bordeaux as a digital project manager. I am both creative and enthusiastic, I like to infuse my projects with my own unique style, while maintaining my high standards for quality and attention to detail. </p>
+    </div>
+  </section>
+
+<section class="section__xp__skils" id="section__down">
+    <div class="content__xp__skils">
+        <div class="xp">
+            <h1 class="title__xp title__color ">experiences</h1>
+            <h4> <strong>Communication manager, WebDesigner, Graphiste</strong></h4>          
+            <ul>
+                <li class="__li">2020/2021- Kestu production<br>webmaster, web mockup, SEO, editorial design, community manager</li> 
+                <li class="__li">2019 - 364 Communication<br>web design, editorial design</li> 
+                <li class="__li">2017 - 06/2018 - Shifft<br>animation, video editing, editorial design</li> 
+                <li class="__li">2017 - Freshpepper<br>editorial design, web mockup</li> 
+                <li class="__li">2016 - Les Origines<br>logo, editorial design</li> 
+                <li class="__li">03/2016 - Decathlon<br> logo</li> 
+            </ul>
+        </div>
+        <div class="skils">
+            <h1 class="title__ title__right title__color ">skils</h1>
+            <ul>
+                <li class="__li">html, css, js, php, sass</li> 
+                <li class="__li">wordpress</li> 
+                <li class="__li">UX/UI design </li> 
+                <li class="__li">video editing, motion design, animation</li> 
+                <li class="__li">editorial design, print and web design</li> 
+                <li class="__li">anglais, espagnol</li> 
+            </ul>              
+        </div>
+    </div>
+</section>
+
+<section class="section__tools">
+    <div class="content__tools">
+        <div class="tools">
+            <img class="tools__img" src="../images/social__icons/ai_.png" alt="">
+            <img class="tools__img" src="../images/social__icons/ps_.png" alt="">
+            <img class="tools__img" src="../images/social__icons/id_.png" alt="">
+            <img class="tools__img" src="../images/social__icons/ae_.png" alt="">
+            <img class="tools__img" src="../images/social__icons/pr_.png" alt="">
+            <img class="tools__img" src="../images/social__icons/figma_.png" alt="">
+            <img class="tools__img" src="../images/social__icons/wordpress_.png" alt="">
+            <img class="tools__img" src="../images/social__icons/html_.png" alt="">
+            <img class="tools__img" src="../images/social__icons/js_.png" alt="">
+            <img class="tools__img" src="../images/social__icons/css_.png" alt="">
+        </div>
+    </div>
+</section>
+
+<section class="section__school">
+    <div class="content__school">
+        <div class="school">
+            <h1 class="title__ title__color ">titles</h1>    
+            <ul>
+                <li class="__li"><strong>Bachelor digital project manager</strong><br>third year at Ecole Supérieur du Digital, Bordeaux</li> 
+                <li class="__li"><strong>Boogle certified</strong><br>digital marketing</li> 
+                <li class="__li"><strong>Bac</strong><br>multi-media visual communication</li> 
+            </ul>
+        </div>
+        <div class="school">
+            <h1 class="title__ title__right title__color ">workshop</h1>
+            <ul>
+                <li class="__li"><strong>Volcom 2021</strong> <br>californitrashion strategy</li> 
+                <li class="__li"><strong>Diginight 2021 </strong><br>video workshop: editing</li> 
+                <li class="__li"><strong>Bordeaux Next Generation 2019</strong>  <br>cinematographic project: scenario, filming, editing</li> 
+            </ul>              
+        </div>
+    </div>
+</section>
+
+
+<footer>
+    <div>
+        <h3 class="copyright">Sarah Mirouze</h3>
+    </div>
+    <div class="social-media">
+        <a href="https://www.facebook.com/sarah.mirouze/" class="fa fa-facebook"></a>
+        <a href="https://www.instagram.com/sarah.mirouze/?hl=fr" class="fa fa-instagram"></a>
+        <a href="https://www.linkedin.com/in/sarah-mirouze-b27b10171/" class="fa fa-linkedin"></a>
+    </div>
+</footer>
+
+</body>
+</html>
